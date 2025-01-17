@@ -21,7 +21,7 @@ spec:
             - containerPort: 80
           volumeMounts:
             - name: pvc-git-demo2
-              mountPath: /opt/app-root/src
+              mountPath: /var/www/html/
       volumes:
         - name: apache-content
           emptyDir: {}
