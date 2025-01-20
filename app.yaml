@@ -20,14 +20,14 @@ spec:
           ports:
             - containerPort: 80
           volumeMounts:
-            - name: pvc-git-demo2
+            - name: pvc-git-demo
               mountPath: /var/www/html/
       volumes:
         - name: apache-content
           emptyDir: {}
-        - name: pvc-git-demo2
+        - name: pvc-git-demo
           persistentVolumeClaim:
-            claimName: pvc-git-demo2
+            claimName: pvc-git-demo
  
 ---
 apiVersion: v1
