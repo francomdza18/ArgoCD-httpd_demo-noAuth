@@ -50,7 +50,7 @@ metadata:
   name: demo-route
   namespace: ocp-demo
 spec:
-  path: /index.html
+  path: /
   to:
     kind: Service
     name: demo-service
