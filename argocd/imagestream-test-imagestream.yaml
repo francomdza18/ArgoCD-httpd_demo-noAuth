@@ -1,7 +1,0 @@
-﻿kind: ImageStream
-apiVersion: image.openshift.io/v1
-metadata:
-  name: test-imagestream-gitops
-spec:
-  lookupPolicy:
-    local: false
