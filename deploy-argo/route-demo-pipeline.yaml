@@ -1,0 +1,22 @@
+﻿kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: demo-pipeline-gitops
+  labels:
+    app: demo-pipeline-gitops
+    app.kubernetes.io/component: demo-pipeline-gitops
+    app.kubernetes.io/instance: demo-pipeline-gitops
+    app.kubernetes.io/name: demo-pipeline-gitops
+    app.kubernetes.io/part-of: demo-pipeline-gitops
+spec:
+  path: /openapi
+  to:
+    kind: Service
+    name: demo-pipeline-gitops
+    weight: 100
+  port:
+    targetPort: 5000-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
