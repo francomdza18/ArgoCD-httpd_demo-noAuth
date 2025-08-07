@@ -1,32 +1,32 @@
 ﻿kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: demo-pipeline-gitops
+  name: deployment-app-github
   labels:
-    app: demo-pipeline-gitops
-    app.kubernetes.io/component: demo-pipeline-gitops
-    app.kubernetes.io/instance: demo-pipeline-gitops
-    app.kubernetes.io/name: demo-pipeline-gitops
-    app.kubernetes.io/part-of: demo-pipeline-gitops
+    app: deployment-app-github
+    app.kubernetes.io/component: deployment-app-github
+    app.kubernetes.io/instance: deployment-app-github
+    app.kubernetes.io/name: deployment-app-github
+    app.kubernetes.io/part-of: deployment-app-github
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-pipeline-gitops
+      app: deployment-app-github
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: demo-pipeline-gitops
-        deployment: demo-pipeline-gitops
+        app: deployment-app-github
+        deployment: deployment-app-github
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:
       containers:
-        - name: demo-pipeline-gitops
-          image: 'image-registry.openshift-image-registry.svc:5000/ocp-demo/test-imagestream-gitops:latest'
+        - name: deployment-app-github
+          image: 'aqui va la imagen:latest'
           ports:
-            - containerPort: 5000
+            - containerPort: 80
               protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
