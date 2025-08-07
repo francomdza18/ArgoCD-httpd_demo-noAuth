@@ -2,13 +2,8 @@
 Este pipeline se crea a traves de Argo CD, posteriormente se deben llenar los campos al realizar el Pipeline Run
 
 # Tareas que hace este Pipeline
-<<<<<<< HEAD
 - Git Clone
 - Buildah
-=======
-Git Clone
-Buildah
->>>>>>> 3d4c9eb769118a85d31f690d6f8ff6e0ddb31e0a
 
 # Tarea Git Clone
 - Usa el task git-clone del namespace openshift-pipelines
