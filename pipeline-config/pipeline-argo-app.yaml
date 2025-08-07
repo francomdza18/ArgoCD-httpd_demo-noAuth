@@ -1,7 +1,7 @@
 ﻿apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
-  name: pipeline-git-argo
+  name: pipeline-github-app
 spec:
   tasks:
     - name: git-clone
@@ -25,9 +25,9 @@ spec:
         - name: SSL_VERIFY
           value: 'true'
         - name: URL
-          value: 'https://gitlabcd.cfeteit.net/centro-de-datos/ocp-web-app-ejemplo.git'
+          value: 'https://github.com/francomdza18/ocp-argo.git'
         - name: REVISION
-          value: main
+          value: despliegue-pagina
         - name: REFSPEC
           value: ''
         - name: SUBMODULES
@@ -46,8 +46,6 @@ spec:
             value: openshift-pipelines
         resolver: cluster
       workspaces:
-        - name: basic-auth
-          workspace: auth-git-https
         - name: output
           workspace: source
     - name: buildah
