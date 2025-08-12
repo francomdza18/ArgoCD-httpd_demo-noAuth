@@ -51,7 +51,7 @@ spec:
     - name: buildah
       params:
         - name: IMAGE
-          value: 'image-registry.openshift-image-registry.svc:5000/demo-pipeline/test-imagestream-gitops:latest'
+          value: 'image-registry.openshift-image-registry.svc:5000/demo-pipeline/imagestream-app:latest'
         - name: DOCKERFILE
           value: ./Containerfile
         - name: BUILD_ARGS
