@@ -25,7 +25,7 @@ spec:
       containers:
         - name: deployment-app-github
           # editar el Image repository al deseado
-          image: 'image-registry.openshift-image-registry.svc:5000/demo-pipeline/imagestream-app'
+          image: 'image-registry.openshift-image-registry.svc:5000/demo-pipeline/imagestream-app:latest'
           ports:
             - containerPort: 80
               protocol: TCP
