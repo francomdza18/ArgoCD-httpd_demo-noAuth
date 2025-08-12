@@ -3,11 +3,11 @@ apiVersion: v1
 metadata:
   name: service-github-app
   labels:
-    app: demo-pipeline-gitops
-    app.kubernetes.io/component: demo-pipeline-gitops
-    app.kubernetes.io/instance: demo-pipeline-gitops
-    app.kubernetes.io/name: demo-pipeline-gitops
-    app.kubernetes.io/part-of: demo-pipeline-gitops
+    app: deployment-app-github
+    app.kubernetes.io/component: deployment-app-github
+    app.kubernetes.io/instance: deployment-app-github
+    app.kubernetes.io/name: deployment-app-github
+    app.kubernetes.io/part-of: deployment-app-github
 spec:
   ipFamilies:
     - IPv4
