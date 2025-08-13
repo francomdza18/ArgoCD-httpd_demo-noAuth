@@ -9,13 +9,12 @@ metadata:
     app.kubernetes.io/name: deployment-app-github
     app.kubernetes.io/part-of: deployment-app-github
 spec:
-  path: /
   to:
     kind: Service
     name: service-github-app
     weight: 100
   port:
-    targetPort: 80-tcp
+    targetPort: 8080-tcp
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
