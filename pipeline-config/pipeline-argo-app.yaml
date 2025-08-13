@@ -90,7 +90,3 @@ spec:
           workspace: dockerconfig
   workspaces:
     - name: source
-    - name: auth-git-https
-      optional: true
-    - name: dockerconfig
-      optional: true
