@@ -90,3 +90,5 @@ spec:
           workspace: dockerconfig
   workspaces:
     - name: source
+    - name: dockerconfig
+      optional: true
