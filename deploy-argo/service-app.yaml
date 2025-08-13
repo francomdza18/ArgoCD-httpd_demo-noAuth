@@ -1,25 +1,29 @@
 ﻿kind: Service
 apiVersion: v1
 metadata:
-  name: demo-pipeline-gitops
+  name: service-github-app
   labels:
-    app: demo-pipeline-gitops
-    app.kubernetes.io/component: demo-pipeline-gitops
-    app.kubernetes.io/instance: demo-pipeline-gitops
-    app.kubernetes.io/name: demo-pipeline-gitops
-    app.kubernetes.io/part-of: demo-pipeline-gitops
+    app: deployment-app-github
+    app.kubernetes.io/component: deployment-app-github
+    app.kubernetes.io/instance: deployment-app-github
+    app.kubernetes.io/name: deployment-app-github
+    app.kubernetes.io/part-of: deployment-app-github
 spec:
   ipFamilies:
     - IPv4
   ports:
-    - name: 5000-tcp
+    - name: 8080-tcp
       protocol: TCP
-      port: 5000
-      targetPort: 5000
+      port: 8080
+      targetPort: 8080
+    - name: 8443-tcp
+      protocol: TCP
+      port: 8443
+      targetPort: 8443
   internalTrafficPolicy: Cluster
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
   selector:
-    app: demo-pipeline-gitops
-    deployment: demo-pipeline-gitops
+    app: deployment-app-github
+    deployment: deployment-app-github
