@@ -1,3 +1,8 @@
+<p align="left">
+   <img width="180" src="https://argo-cd.readthedocs.io/en/stable/assets/logo.png">
+  </p>
+
+
 # Despliegue de una página web usando Argo y Pipelines
 **ArgoCD-httpd_demo-noAuth** es una applicacion pensada para ejecutar dentro de **ArgoCD**.
 
